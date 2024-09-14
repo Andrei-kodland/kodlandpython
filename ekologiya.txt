@@ -1,0 +1,40 @@
+import discord
+from discord.ext import commands
+
+intents = discord.Intents.default()
+intents.message_content = True
+
+bot = commands.Bot(command_prefix='$', intents=intents)
+
+@bot.command()
+async def start(ctx):
+    """reply with information."""
+    await ctx.send("privet , dorogoy drug, ya bot, ya pomogu tebe umenshit kolichesto othodov , vot kakie komandy ya mogu sdelat - tips ( v sfere doma,shkoly,pitaniya) recycle (steklo , bumaga , plastik)")
+
+@bot.command()
+async def tipshkola(ctx): 
+    await ctx.send("nosi s soboy mnogorazivuy butilku a ne plastikovuyu")
+
+@bot.command()
+async def tipdom(ctx): 
+    await ctx.send("sozday otdelnie konteineri dlya sortirovki othodov - bumaga / steklo / plastik ")
+
+@bot.command()
+async def tippitanie(ctx): 
+    await ctx.send("staraisya pokupat produkti ot mestnyh proizvoditeley")
+
+@bot.command()
+async def recycleplastik(ctx): 
+    await ctx.send(" ne vse vidi plastika pererabativaemie iz za raznih svoistv i metodov utilizacii, vot pererabativaemie vidi plastika - PET , HDPE , PP . ne pererebativaemie - PVC , PS ")
+
+@bot.command()
+async def recyclesteklo(ctx): 
+    await ctx.send("bolshinsto vidov stekla pererabativaemie , no est isklucheniya - jaroprochnoe steklo , avtomobilnoe steklo , lampochki , zerkala")
+
+@bot.command()
+async def recyclebumaga(ctx): 
+    await ctx.send("bumaga eto odin iz naibolee legko pererabativaemih materialov odnako ne vse ee vidi mozhno pererabotat. vot primeri pererabativaemih - gazeti i jurnaly , bumaga dlya printera, carton. a vot primeri nepererabativaemih - bumazhnie salfetki / polotensi , tualetnaya bumaga")
+
+
+
+bot.run('MTI3NDc1ODQzNjM5MDcwMzI4NQ.G2UkVn.wgOmYFAE3cWmdJQ6Uzvv6XtbsBT5ZKYNQZWyvY')
